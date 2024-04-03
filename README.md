@@ -118,42 +118,85 @@ Installing Globus Connect Personal on Linux may require resolving GTK+ dependenc
 - For additional help and troubleshooting, refer to the [Globus documentation](https://docs.globus.org/globus-connect-personal/troubleshooting-guide/).
 - For further support, visit the [Globus Support](https://www.globus.org/support) page for detailed guides and troubleshooting assistance.
 
-# Use Globus Connect Server for Institutional Resources
 
-If you need to transfer files to or from institutional servers or shared resources, your institution's IT department typically manages these setups through Globus Connect Server. Contact them for access and instructions.
+# Basic File Transfer with Globus
+## Choose Your Source Endpoint
+- After you’ve signed up and logged in to Globus, you’ll begin at the "File Manager" tab.
+![filemgr-1](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/9a6f183c-eff6-41fc-8076-fd5f21e7e211)
+- The first time you use the File Manager, all fields will be blank.
+![filemgr-2](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/67121422-5fcb-4dd5-8b2f-71066c390bb9)
 
-## Next Steps
+- Click in the Collection field at the top of the File Manager page and type "globus tutorial end". Globus will list collections with matching names. The collections Globus Tutorial Endpoint 1 and Globus Tutorial Endpoint 2 are collections administered by the Globus team for demonstration purposes and are accessible to all Globus users without further authentication.
+![filemgr-3](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/99fc7a98-5229-4209-8445-8ac160518764)
 
-After setting up Globus Connect Personal:
-
-1. Log in to the [Globus Web App](https://app.globus.org/).
-2. Use the File Manager to start transferring files between your newly created endpoint and others within the Globus ecosystem.
-
-For more detailed instructions and troubleshooting, refer to the official [Globus documentation](https://docs.globus.org/).
+- Click on Globus Tutorial Endpoint 1. Globus will connect to the collection and display the default directory, /~/. (It will be empty.) Click the "Path" field and change it to /share/godata/. Globus will show the files in the new path: three small text files.
+![filemgr-4](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/f669f719-8df2-4670-b98b-9566fbb4c1fe)
 
 
+## Getting Started with Collections to request a file transfer
+### Key Concept: Collection
 
-## Basic File Transfer with Globus
+A **collection** is a fundamental concept within Globus, representing a named location where data is stored. Collections can be hosted on a wide variety of systems, enabling seamless data access and sharing across different storage environments. This guide provides an overview of what collections are and how they're used in Globus.
 
-### Choose Your Source Endpoint
+### What is a Collection?
 
-- Click on the "File Manager" tab and start typing the name of your personal computer's endpoint. Select it from the dropdown menu.
+A collection is essentially a pointer to a data storage location that has been named and integrated into the Globus ecosystem. These locations can vary widely, including but not limited to:
+
+- Campus storage systems
+- High-Performance Computing (HPC) clusters
+- Personal laptops
+- Cloud storage services like Amazon S3 and Google Drive
+- Scientific instruments
+
+The beauty of collections is that users interacting with Globus do not need to know the physical details or technical specifics of where the data is stored. To access or share data, you only need to know the collection's name.
+
+### Uses of Collections
+
+Collections serve multiple purposes within the Globus platform:
+
+- **Data Access:** Collections allow authorized users to browse and transfer files seamlessly, regardless of the underlying storage infrastructure.
+- **Data Sharing:** They provide a mechanism for sharing data with other Globus users, facilitating collaboration and data distribution.
+- **Data Discovery:** Collections can be made discoverable to other Globus users, enhancing the visibility of datasets and promoting collaborative opportunities.
+
+### Globus Connect and Collections
+
+To host a collection, you'll need to use **Globus Connect**. Globus Connect comes in two flavors:
+
+- **Globus Connect Personal:** For turning personal computers into Globus endpoints.
+- **Globus Connect Server:** For integrating institutional storage systems, HPC clusters, and other large-scale storage into the Globus network.
+
+By setting up Globus Connect, you can create collections on your storage systems, making your data accessible and shareable via the Globus platform.
+
+1. Determine the storage system you wish to use with Globus.
+2. Install the appropriate version of Globus Connect.
+3. Create a collection and assign it a name for easy reference.
+4. Configure access and sharing settings according to your needs.
 
 ### Navigate to the Files You Wish to Transfer
 
-- Browse the directory structure to find the desired files or folders.
+- Click Transfer or Sync to... in the command panel on the right side of the page. A new collection panel will open, with a "Transfer or Sync to" field at the top of the panel.
+![filemgr-5](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/42bb258f-89e1-4337-b1ee-3ec07f627d68)
+
+- Find the Globus Tutorial Endpoint 2 collection and connect to it as you did with the Globus Tutorial Endpoint 1 above. The default directory, /~/ will again be empty. Your goal is to transfer the sample files here. Click on the left collection, Globus Tutorial Endpoint 1, and select all three files. The Start> button at the bottom of the panel will activate.
+![filemgr-6](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/f9986b74-1fc3-451f-8249-1aefe14d1f5b)
 
 ### Choose Your Destination Endpoint
-
-- Search and select the destination endpoint in the other panel. Authenticate if necessary.
+- Between the two Start buttons at the bottom of the page, the Transfer & Sync Options tab provides access to several options. By default, Globus verifies file integrity after transfer using checksums. Click the information icons for explanations of the other transfer settings. Globus gives you powerful control over the behavior of the transfer with a simple mouse click. Change the transfer settings if you’d like. You may also enter a label for the transfer, but this isn’t required.
 
 ### Initiate the Transfer
+- Click the Start> button to transfer the selected files to the collection in the right panel. Globus will display a green notification panel—​confirming that the transfer request was submitted—​and add a badge to the Activity item in the command menu on the left of the page.
+![filemgr-7](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/873417ff-5851-4503-9e53-dd20ea2142b4)
 
-- Select the files or folders and click "Start" or "Transfer". Monitor the progress in the "Activity" tab.
+## Confirm transfer completion
+- Only three small files were transferred in our simple example, so the transfer will complete quickly. Click Activity in the command menu on the left of the page to go to the Activity page. On the Activity page, click the arrow icon on the right to view details about the transfer. You will also receive an email with the transfer details.
+![filemgr-8](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/f5a2e9b3-f176-44f1-8d25-e55d66db962d)
+![filemgr-9](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/542504c7-711c-4131-b10b-dc893ec41a53)
+- Click File Manager in the command menu on the left of the Activity page to return to the File Manager. The collections you were viewing before will reappear. You may notice that the transferred files are not listed in the right panel with the Globus Tutorial Endpoint 2 collection and the /~/ path, even though the transfer has completed. Click the refresh icon (circular arrows) at the top of the collection panel to see the updated contents.
+![filemgr-10](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/13ebc54e-b464-4e65-9857-662dc07e92c1)
 
-## Sharing Data with NYU and Outside Entities
+# Sharing Data with NYU and Outside Entities
 
-### Navigate to the Endpoint
+## Navigate to the Endpoint
 
 - Go to the endpoint containing the data you wish to share.
 
