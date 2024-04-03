@@ -436,5 +436,4 @@ Once you have created a flow, your next steps are probably to run it in order to
 
 Refer back to the How to Run a Flow Tutorial for a description of how to run your flow.
 
-
-# For further support, visit the [Globus Support](https://www.globus.org/support) page for detailed guides and troubleshooting assistance.
+## For further support, visit the [Globus Support](https://www.globus.org/support) page for detailed guides and troubleshooting assistance.
