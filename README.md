@@ -1,96 +1,155 @@
-Absolutely, I'll expand the README.md content to include detailed steps for each section, similar to the structured tutorial provided earlier.
-
-```markdown
 # Globus Tutorial
 
 ## Introduction
 
-Globus is a cloud-based service designed for secure, reliable file transfer, sharing, and data management across various institutions. It's especially useful for handling large datasets and features tools like Globus Flows and Globus Compute for automating workflows and facilitating data analysis.
+Globus is a cloud-based service designed for secure, reliable file transfer, sharing, and data management across various institutions. It is particularly useful for handling large datasets and comes equipped with tools like Globus Flows and Globus Compute to automate workflows and facilitate data analysis.
 
-## Setting Up Globus
+For more detailed informtion, please visit https://www.globus.org/
 
-### Create a Globus Account
+# Setting Up Globus
 
-1. Visit the [Globus website](https://www.globus.org/) and sign up using your institutional or a personal email address. If you're affiliated with NYU, you can use your NYU credentials for seamless integration.
+## Step 1: Log In with Your NYU Identity
 
-### Install Globus Connect Personal
+This section explains how to log into Globus using an existing identity. 
+Please log in with your NYU credentials, which is the first step in setting up your Globus access for secure and reliable file transfers and data sharing.
 
-To transfer files from a personal computer, you need to install Globus Connect Personal. Follow these steps:
+### Navigate to Globus
 
-1. Download the installer from the [Globus Connect Personal page](https://www.globus.org/globus-connect-personal).
-2. Follow the installation prompts on your machine.
-3. During setup, give your endpoint a unique name for easy identification.
+Go to [www.globus.org](https://www.globus.org/) and click on "Login" at the top of the page.
 
-For Linux users, you might need to install GTK+ on your system. Here are the commands for common distributions:
+### Select Your Organization
 
-- **Ubuntu/Debian-based Systems**:
-    ```sh
-    sudo apt-get update
-    sudo apt-get install libgtk2.0-0
-    ```
+On the Globus login page, start typing "NYU" in the search box to narrow down the list. When you find "New York University", click "Continue."
+**Reminder:** Please ensure you select "Use your existing organizational login" and specifically avoid using "Sign in with Google" or other options.
 
-If you encounter issues with the GUI or prefer a command-line setup, you can run Globus Connect Personal with the `--no-gui` option:
 
-```sh
-./globusconnectpersonal -setup --no-gui
-```
+### Log In with NYU Credentials
 
-### Use Globus Connect Server for Institutional Servers
+You'll be redirected to NYU's login page. Use your NYU credentials to log in.
 
-For institutional servers or shared resources, the setup is typically handled by the institution's IT department.
+### Account Linking (Optional)
+
+After logging in, Globus may prompt you about linking to an existing account.
+   - If it's your first time using Globus, simply click "Continue."
+   - If you've used Globus with another account, select "Link to an existing account." For more details, see the Identity Linking Tutorial provided by Globus.
+
+### Complete the Sign-Up Process
+
+You may be asked to provide additional information, such as your affiliation with NYU and whether or not you'll be using Globus for commercial purposes. Fill in the necessary details and proceed by clicking "Continue."
+
+### Grant Globus Permission
+
+Finally, Globus will request permission to use your identity for accessing information and performing actions (like file transfers) on your behalf. Granting this permission is essential for utilizing Globus services.
+
+By following these steps, you will have successfully logged into Globus using your NYU identity. This initial setup is crucial for accessing the various services offered by Globus, including file transfers and data management.
+
+(Proceed with additional setup steps as necessary.)
+
+
+## Step 2: Installing Globus Connect Personal (Optional)
+
+Globus Connect Personal enables your personal computer to act as an endpoint for file transfers using Globus. Below are the unified steps to install Globus Connect Personal on macOS, Linux, and Windows systems, with specific instructions for each platform when needed.
+
+### Prerequisites
+
+Ensure you have a Globus account. If you don't, visit [Globus](https://www.globus.org/) and sign in to NYU credential.
+
+### General Installation Steps
+
+1. **Download the Installer:**
+   - For **macOS** and **Windows**, visit the [Globus Connect Personal installation page](https://www.globus.org/globus-connect-personal) and select your operating system to download the installer.
+   - For **Linux**, select your distribution on the [Linux installation page](https://docs.globus.org/globus-connect-personal/install/linux/) and download the appropriate installer.
+
+2. **Install Globus Connect Personal:**
+   - **macOS**: Open the downloaded file and follow the on-screen prompts.
+   - **Linux**: Open a terminal, navigate to where you downloaded the installer, and follow the command-line installation instructions provided on the download page.
+   - **Windows**: Execute the downloaded file and follow the installation prompts.
+
+3. **Set Up an Endpoint:**
+   - Once installed, launch Globus Connect Personal on your machine.
+   - Follow the in-app instructions to log in with your Globus account.
+   - Create a new endpoint, giving it a unique name for easy identification within the Globus ecosystem.
+
+### Platform-Specific Guidance
+
+- **macOS Users**: Access to certain folders may require granting additional permissions to Globus Connect Personal, especially for macOS Catalina and newer versions.
+- **Linux Users**: The installation process may vary depending on your Linux distribution. Ensure you're following the guide corresponding to your version.
+- **Windows Users**: Make sure to allow Globus Connect Personal through your firewall if prompted to ensure seamless file transfers.
+
+### Post-Installation
+
+After setting up Globus Connect Personal:
+
+1. Log in to the [Globus Web App](https://app.globus.org/).
+2. Use the File Manager to begin transferring files between your endpoint and others in the Globus network.
+
+For additional help and troubleshooting, refer to the [Globus documentation](https://docs.globus.org/globus-connect-personal/troubleshooting-guide/).
+
+# Use Globus Connect Server for Institutional Resources
+
+If you need to transfer files to or from institutional servers or shared resources, your institution's IT department typically manages these setups through Globus Connect Server. Contact them for access and instructions.
+
+## Next Steps
+
+After setting up Globus Connect Personal:
+
+1. Log in to the [Globus Web App](https://app.globus.org/).
+2. Use the File Manager to start transferring files between your newly created endpoint and others within the Globus ecosystem.
+
+For more detailed instructions and troubleshooting, refer to the official [Globus documentation](https://docs.globus.org/).
+
+
 
 ## Basic File Transfer with Globus
 
-### Log In
-
-1. Open a web browser and navigate to the [Globus Web App](https://app.globus.org/).
-2. Log in using your Globus account. Institutional credentials (e.g., NYU) may be used if applicable.
-
 ### Choose Your Source Endpoint
 
-1. Click on the "File Manager" tab.
-2. Type the name of your endpoint (e.g., your personal computer) in one of the search bars. Select it from the dropdown.
+- Click on the "File Manager" tab and start typing the name of your personal computer's endpoint. Select it from the dropdown menu.
 
 ### Navigate to the Files You Wish to Transfer
 
-1. Browse the directory structure to locate the files or folders you want to transfer.
+- Browse the directory structure to find the desired files or folders.
 
 ### Choose Your Destination Endpoint
 
-1. In the other panel, search for and select the destination endpoint using the search bar.
+- Search and select the destination endpoint in the other panel. Authenticate if necessary.
 
 ### Initiate the Transfer
 
-1. Select the files or folders you wish to transfer.
-2. Click the "Start" or "Transfer" button. Monitor the progress in the "Activity" tab.
+- Select the files or folders and click "Start" or "Transfer". Monitor the progress in the "Activity" tab.
 
 ## Sharing Data with NYU and Outside Entities
 
-### Share Data
+### Navigate to the Endpoint
 
-1. Navigate to the endpoint containing the data you wish to share.
-2. Select the 'Share' option and create a shared endpoint or use an existing one.
-3. Set permissions, specifying whether users can view, download, or upload files.
-4. Invite users via their email addresses. Ensure they have a Globus account if outside NYU.
+- Go to the endpoint containing the data you wish to share.
+
+### Create or Use a Shared Endpoint
+
+- Select the 'Share' option, set permissions, and invite users via their email addresses. Ensure outside users have a Globus account.
 
 ## Globus Flows for Automated Data Management
 
-### Create a Flow
+### Access and Define Your Flow
 
-1. Access the Globus Flows service through the [Globus web interface](https://app.globus.org/flows).
-2. Use the visual or JSON editor to define your flow, including triggers, actions, and conditions.
-3. Activate the flow, providing the necessary input parameters. It will run automatically based on the triggers and conditions you've set.
+- Log into the Globus Web App and navigate to the "Flows" service. Use the visual or JSON editor to define your flow, including actions, triggers, and conditions.
+
+### Activate the Flow
+
+- Provide necessary input parameters, save, and enable the flow for automatic execution based on the defined conditions.
 
 ## Globus Compute for Data Analysis
 
-### Setting Up a Compute Task
+### Define Your Computing Task
 
-1. Define your computing task, specifying the application, input data, and computing resources.
-2. Use Globus to transfer input data to the computing resource.
-3. Monitor the task through the Globus interface or the computing resource's native tools.
-4. Upon completion, transfer the output data back to your desired location using Globus.
+- Specify the application to run, the input data, and the computing resources to use.
 
-This tutorial provides a comprehensive guide to getting started with Globus for file transfers, data sharing, and leveraging advanced features for data management and analysis.
-```
+### Transfer Input Data
 
-This expanded README.md includes detailed steps for setting up Globus, transferring files, sharing data, and utilizing Globus Flows and Globus Compute for automated data management and analysis tasks, making it a comprehensive guide for users.
+- Use Globus to move input data to the computing resource.
+
+### Monitor the Task and Transfer Output Data
+
+- Use Globus or the computing resource's tools to monitor the task. After completion, transfer the output data back to your desired location.
+
+This tutorial outlines the steps to get started with Globus for file transfers, sharing data securely, and leveraging Globus' advanced features for automating data management and running analysis tasks on remote computing resources.
