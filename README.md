@@ -195,16 +195,66 @@ By setting up Globus Connect, you can create collections on your storage systems
 ![filemgr-10](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/13ebc54e-b464-4e65-9857-662dc07e92c1)
 
 # Sharing Data with NYU and Outside Entities
+With Globus, you can easily share research data with your collaborators. You don’t need to create accounts on the server(s) where your data is stored. You can share data with anyone using their identity or their email address.
 
-## Navigate to the Endpoint
+To share data, you’ll create a guest collection and grant your collaborators access as described in the instructions below. If you like, you can designate other Globus users as "access managers" for the guest collection, allowing them to grant or revoke access privileges for other Globus users.
 
-- Go to the endpoint containing the data you wish to share.
+## Step 1: Navigate to the Endpoint
+- Select the collection that has the files/folders you wish to share and, if necessary, activate the collection.
+![sharing-1](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/faa64cd7-954f-4049-8aa1-fb8c829b0a9f)
 
-### Create or Use a Shared Endpoint
+## Step 2: Create or Use a Shared Endpoint
 
 - Select the 'Share' option, set permissions, and invite users via their email addresses. Ensure outside users have a Globus account.
+![sharing-2](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/436d9331-4cf6-4d1f-b92f-d13547a57d22)
+- If Share is not available, contact the endpoint’s administrator or refer to Globus Connect Server Installation Guide for instructions on enabling sharing. If you’re a using a Globus Connect Personal endpoint and you’re a Globus Plus user, enable sharing by opening the Preferences for Globus Connect Personal, clicking the Access tab, and checking the Sharable box.
 
-## Globus Flows for Automated Data Management
+## Step 3: Name and Create Your Collection
+- Provide a name for your guest collection, such as "Demo," and click "Create Share." If this is your first time accessing the collection, authentication and consent for Globus services to manage your collections will be required.
+![sharing-3](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/4eb11963-9f55-4792-b7cc-107c545ce29f)
+
+
+## Step 4: Setting Initial Permissions
+- When your collection is created, you’ll be taken to the Sharing tab, where you can set permissions. As shown below, the starting permissions give read and write access (and the Administrator role) to the person who created the collection.
+![sharing-4](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/316ebc66-1153-4bdd-b247-f640abd027ba)
+
+- Click the Add Permissions button or icon to share access with others. You can add permissions for an individual user, for a group, or for all logged-in users. In the Identity/E-mail field, type a person’s name or username (if user is selected) or a group name (if group is selected) and press Enter. Globus will display matching identities. Pick from the list. If the user hasn’t used Globus before or you only have an email address, enter the email address and click Add.
+![sharing-5](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/a1eef4dd-405e-426d-94ee-0ac49a872317)
+
+## Step 5: Adding Permissions for Others
+- To share access, click the "Add Permissions" button or icon. You can add permissions for an individual user, a group, or all logged-in users. In the "Identity/E-mail" field, enter the recipient's name, username, or group name and select the correct one from the matching identities presented by Globus.
+![sharing-6](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/15db43bd-95bf-403e-8afa-2efb43b700c7) 
+
+## Step 6: Notification and Access Details
+- If the user is new to Globus or if you have only their email address, enter it and click "Add." This grants the specified access level (e.g., read access) and sends an email notification to the user with a link to the shared endpoint. Optionally, add a customized message to this email. If you prefer not to send an email notification, uncheck the "Send E-mail" checkbox.
+![sharing-5](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/e2ce5a68-68ea-4674-b9ba-5d4c8ef741d9)
+
+## Note on Write Access
+Be aware that granting write access allows users to modify and delete files and folders within the specified folder.
+
+## Step 7: Sharing Subfolders
+- Permissions can also be set for subfolders by specifying a path in the "Path" field.
+![sharing-6](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/111150b6-8cf8-4893-91d6-0a14efd0a87d)
+
+
+## Step 8: Accessing the Collection
+- After receiving the email notification, your colleague can click on the link to log into Globus and access the guest collection. In the example below, user grohder1@globusid.org accesses the guest collection. Note that the collection name is Demo and the path is /, because this is what the user was given access to.
+![sharing-7](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/24a9b261-0029-45cb-adfa-aacd8f3eb499)
+
+## Step 9: Managing Collection Permissions
+To allow others to manage permissions, use the "Roles" tab. Here, you can assign roles, such as the "Access Manager," to individual users or groups, enabling them to manage permissions for the collection. The person who created the collection is assigned the "Administrator" role by default.
+![sharing-8](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/8f40dd61-0e0f-4026-950a-90dffca202cf)
+
+## Step 10: Assigning the Access Manager Role
+The "Access Manager" role can be granted to users, giving them the ability to manage collection permissions, including read/write access. For example, assigning this role to user "grohder1@globusid.org" enables them to manage permissions for others.
+![sharing-9](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/7dfcefb1-5cd9-4eff-be6e-5244376d9db7)
+
+## Group Role Assignments
+When a role is assigned to a group, all members of that group inherit the assigned role, streamlining permission management for teams or collaborative projects.
+
+
+
+# Globus Flows for Automated Data Management
 
 ### Access and Define Your Flow
 
