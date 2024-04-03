@@ -19,8 +19,9 @@ Go to [www.globus.org](https://www.globus.org/) and click on "Login" at the top 
 
 ### Select Your Organization
 
-On the Globus login page, start typing "NYU" in the search box to narrow down the list. When you find "New York University", click "Continue."
+On the Globus login page, start typing "New York University" in the search box to narrow down the list. When you find "New York University", click "Continue."
 **Reminder:** Please ensure you select "Use your existing organizational login" and specifically avoid using "Sign in with Google" or other options.
+![image](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/f5aad530-be08-4c1e-828c-e3c00f66f6e8)
 
 
 ### Log In with NYU Credentials
@@ -43,8 +44,7 @@ Finally, Globus will request permission to use your identity for accessing infor
 
 By following these steps, you will have successfully logged into Globus using your NYU identity. This initial setup is crucial for accessing the various services offered by Globus, including file transfers and data management.
 
-(Proceed with additional setup steps as necessary.)
-
+![login-6](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/62d84485-3c1a-476b-b41f-1afede2700c7)
 
 ## Step 2: Installing Globus Connect Personal (Optional)
 
@@ -82,8 +82,41 @@ After setting up Globus Connect Personal:
 
 1. Log in to the [Globus Web App](https://app.globus.org/).
 2. Use the File Manager to begin transferring files between your endpoint and others in the Globus network.
+![image](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/0cd07cd1-2ad5-4fc7-ad6c-29779bc09f50)
 
-For additional help and troubleshooting, refer to the [Globus documentation](https://docs.globus.org/globus-connect-personal/troubleshooting-guide/).
+
+## Common Troubleshooting
+![image](https://github.com/Yolo1105/Tutorial-on-globus/assets/99266347/a4f463b5-122e-4e65-8500-88596b3325ce)
+
+### Issue: GTK+ Dependency or Non-GUI Preference
+
+Installing Globus Connect Personal on Linux may require resolving GTK+ dependencies or accommodating a preference for non-GUI setups.
+
+### Solutions
+
+#### Installing GTK+ on Your System
+
+1. **For Ubuntu/Debian-based Systems:**
+   - If GTK+ is missing, install it by running the following commands in your terminal:
+     ```sh
+     sudo apt-get update
+     sudo apt-get install libgtk2.0-0
+     ```
+
+#### Running Globus Connect Personal Without GUI
+
+1. **Non-GUI Setup:**
+   - If you prefer a CLI setup or if installing GTK+ does not resolve your issue, Globus Connect Personal can be installed without the GUI by using the following command:
+     ```sh
+     ./globusconnectpersonal -setup --no-gui
+     ```
+
+### Additional Tips
+
+- Ensure your system meets all other prerequisites for running Globus Connect Personal.
+- Distribution-specific instructions or requirements may apply. Check the Globus documentation for more information.
+- For additional help and troubleshooting, refer to the [Globus documentation](https://docs.globus.org/globus-connect-personal/troubleshooting-guide/).
+- For further support, visit the [Globus Support](https://www.globus.org/support) page for detailed guides and troubleshooting assistance.
 
 # Use Globus Connect Server for Institutional Resources
 
